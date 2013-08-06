@@ -51,7 +51,7 @@ namespace Nancy.Helpers
             if (t == null)
                 throw new ArgumentNullException("t");
 
-            return (t.GetConstructor(BindingFlags.Instance, null, Type.EmptyTypes, null) != null);
+            return (t.GetConstructor(Type.EmptyTypes) != null);
         }
 
 		public static bool IsAssignable (Type to, Type from) {
